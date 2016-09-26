@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AbsolutewsTask</string>
+    <string name="facebook_app_id">317474475274263</string>
+    <string name="login_error">Oh, login failed</string>
+    <string name="name">User name: %s</string>
+    <string name="email">User email: %s</string>
+</resources>
