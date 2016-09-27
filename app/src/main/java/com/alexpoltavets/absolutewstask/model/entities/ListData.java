@@ -1,11 +1,11 @@
-package com.alexpoltavets.absolutewstask.model.rest;
+package com.alexpoltavets.absolutewstask.model.entities;
 
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Data {
+public class ListData {
 
     @SerializedName("buildings")
     private List<Building> buildings = new ArrayList<Building>();

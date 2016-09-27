@@ -1,8 +1,11 @@
 package com.alexpoltavets.absolutewstask.model;
 
+import android.os.NetworkOnMainThreadException;
 import android.util.Log;
 
-import com.alexpoltavets.absolutewstask.model.rest.BuildingList;
+import com.alexpoltavets.absolutewstask.model.entities.BuildingList;
+
+import java.io.IOException;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -11,28 +14,25 @@ import retrofit2.Response;
 
 public class ApiRequest {
     private static ApiRequest instance=null;
+    private BuildingsInterface service;
 
-    private ApiRequest() {
+    private ApiRequest(BuildingsInterface service) {
+        this.service= service;
+
     }
+    private ApiRequest(){}
     public static ApiRequest getInstance(){
         if(instance==null){
-            instance=new ApiRequest();
+            instance=new ApiRequest(RestClient.getInstance().create(BuildingsInterface.class));
         }
         return instance;
     }
-    public void getBuildingsList(){
-        ApiCallback service= RestClient.getInstance().create(ApiCallback.class);
+    public Response<BuildingList> getBuildingsList() throws NetworkOnMainThreadException, IOException {
         Call<BuildingList> call=service.getBuildings();
-       call.enqueue(new Callback<BuildingList>() {
-           @Override
-           public void onResponse(Call<BuildingList> call, Response<BuildingList> response) {
-               Log.d("RETROFIT","SUCCESS");
-           }
-
-           @Override
-           public void onFailure(Call<BuildingList> call, Throwable t) {
-               Log.d("RETROFIT","FAILED: "+t.getLocalizedMessage());
-           }
-       });
+       return call.execute();
+    }
+    public Response<BuildingList> getBuildingItem(int id) throws NetworkOnMainThreadException,IOException{
+        Call<BuildingList> call=service.getBuildingItem(id);
+        return call.execute();
     }
 }

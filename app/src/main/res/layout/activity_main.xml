@@ -1,26 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="10dp"
-    >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/main_userinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:padding="10dp">
+
         <TextView
             android:id="@+id/facebook_name"
+            style="@style/FacebookProfileInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Alex Poltavets"
-            style="@style/FacebookProfileInfo"
-            />
+            android:text="Alex Poltavets" />
+
         <TextView
             android:id="@+id/facebook_email"
+            style="@style/FacebookProfileInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="alex.mediaportal@gmail.com"
-            style="@style/FacebookProfileInfo"
-            />
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/main_recycler"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-</LinearLayout>
+            android:text="alex.mediaportal@gmail.com" />
+    </LinearLayout>
+<ProgressBar
+    android:id="@+id/main_progressbar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    />
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/main_recycler"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/main_userinfo"
+      android:layout_marginTop="10dp"
+      />
+</RelativeLayout>

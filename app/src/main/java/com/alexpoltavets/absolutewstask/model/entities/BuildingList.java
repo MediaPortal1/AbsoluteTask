@@ -1,4 +1,4 @@
-package com.alexpoltavets.absolutewstask.model.rest;
+package com.alexpoltavets.absolutewstask.model.entities;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -6,16 +6,16 @@ import com.google.gson.annotations.SerializedName;
 public class BuildingList {
 
     @SerializedName("data")
-    private Data data;
+    private ListData data;
     @SerializedName("status")
     private String status;
 
 
-    public Data getData() {
+    public ListData getData() {
         return data;
     }
 
-    public void setData(Data data) {
+    public void setData(ListData data) {
         this.data = data;
     }
 

@@ -3,7 +3,6 @@ package com.alexpoltavets.absolutewstask.model;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.converter.simplexml.SimpleXmlConverterFactory;
 
 
 public class RestClient {

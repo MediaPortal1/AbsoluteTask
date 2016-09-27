@@ -4,4 +4,10 @@
     <string name="login_error">Oh, login failed</string>
     <string name="name">User name: %s</string>
     <string name="email">User email: %s</string>
+    <string name="title">Title: %s</string>
+    <string name="address">Address: %s</string>
+    <string name="rent">Rent: %s</string>
+    <string name="sale">Sale: %s</string>
+    <string name="minrent">Minrent: %s</string>
+    <string name="minsale">Minsale: %s</string>
 </resources>

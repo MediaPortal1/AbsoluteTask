@@ -1,11 +1,6 @@
-package com.alexpoltavets.absolutewstask.model.rest;
+package com.alexpoltavets.absolutewstask.model.entities;
 
 import com.google.gson.annotations.SerializedName;
-
-import org.simpleframework.xml.ElementList;
-import org.simpleframework.xml.Root;
-
-import java.util.List;
 
 public class Recent {
 

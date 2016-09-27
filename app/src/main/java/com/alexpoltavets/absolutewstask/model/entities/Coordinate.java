@@ -1,9 +1,6 @@
-package com.alexpoltavets.absolutewstask.model.rest;
+package com.alexpoltavets.absolutewstask.model.entities;
 
 import com.google.gson.annotations.SerializedName;
-
-import org.simpleframework.xml.Element;
-import org.simpleframework.xml.Root;
 
 public class Coordinate
 {

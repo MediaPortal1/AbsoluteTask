@@ -1,4 +1,4 @@
-package com.alexpoltavets.absolutewstask.model.rest;
+package com.alexpoltavets.absolutewstask.model.entities;
 
 
 import com.google.gson.annotations.SerializedName;
