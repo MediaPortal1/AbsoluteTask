@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AbsoluteTask.iml" filepath="$PROJECT_DIR$/AbsoluteTask.iml" />
       <module fileurl="file://$PROJECT_DIR$/AbsolutewsTask.iml" filepath="$PROJECT_DIR$/AbsolutewsTask.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
