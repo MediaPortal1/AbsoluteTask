@@ -1,36 +1,35 @@
 package com.alexpoltavets.absolutewstask.model.rest;
 
-import org.simpleframework.xml.Element;
-import org.simpleframework.xml.Root;
+import com.google.gson.annotations.SerializedName;
 
-@Root(name = "data")
-public class Data
-{
-    @Element(name = "buildings")
-    private Buildings buildings;
+import java.util.ArrayList;
+import java.util.List;
 
-    @Element(name = "recent")
-    private Recent recent;
+public class Data {
 
-    public Buildings getBuildings ()
-    {
+    @SerializedName("buildings")
+    private List<Building> buildings = new ArrayList<Building>();
+    @SerializedName("recent")
+    private List<Recent> recent = new ArrayList<Recent>();
+
+
+
+    @SerializedName("buildings")
+    public List<Building> getBuildings() {
         return buildings;
     }
 
-    public void setBuildings (Buildings buildings)
-    {
+    public void setBuildings(List<Building> buildings) {
         this.buildings = buildings;
     }
 
-    public Recent getRecent ()
-    {
+    public List<Recent> getRecent() {
         return recent;
     }
 
-    public void setRecent (Recent recent)
-    {
+
+    public void setRecent(List<Recent> recent) {
         this.recent = recent;
     }
 
 }
-

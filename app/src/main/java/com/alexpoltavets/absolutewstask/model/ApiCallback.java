@@ -1,6 +1,6 @@
 package com.alexpoltavets.absolutewstask.model;
 
-import com.alexpoltavets.absolutewstask.model.rest.Response;
+import com.alexpoltavets.absolutewstask.model.rest.BuildingList;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -9,7 +9,7 @@ import retrofit2.http.Query;
 public interface ApiCallback {
 
     @GET("list")
-    Call<Response> getBuildings();
+    Call<BuildingList> getBuildings();
     @GET("detail")
-    Call<Response> getBuildingItem(@Query("id")int buildingID);
+    Call<BuildingList> getBuildingItem(@Query("id")int buildingID);
 }

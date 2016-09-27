@@ -1,15 +1,16 @@
 package com.alexpoltavets.absolutewstask.model.rest;
 
+import com.google.gson.annotations.SerializedName;
+
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
 
-@Root(name = "coordinate")
 public class Coordinate
 {
-    @Element(name = "lng")
+    @SerializedName("lng")
     private String lng;
 
-    @Element(name = "lat")
+    @SerializedName("lat")
     private String lat;
 
     public String getLng ()

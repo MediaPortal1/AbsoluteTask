@@ -2,6 +2,7 @@ package com.alexpoltavets.absolutewstask.model;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.simplexml.SimpleXmlConverterFactory;
 
 
@@ -15,7 +16,8 @@ public class RestClient {
         if(retrofit==null){
             retrofit=new Retrofit.Builder()
                     .baseUrl(API_BASE_URL)
-                    .addConverterFactory(SimpleXmlConverterFactory.create())
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .client(new OkHttpClient())
                     .build();
         }
         return retrofit;
